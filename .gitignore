@@ -7,7 +7,7 @@ __pycache__/
 *.so
 /mlflow/1-MLproject/mlartifacts/
 /mlflow/1-MLproject/mlruns/
-
+notes/
 /mlflow/2-DLMLFLOW/mlruns/
 # Distribution / packaging
 .Python
