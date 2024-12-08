@@ -10,7 +10,9 @@ __pycache__/
 notes/
 /mlflow/2-DLMLFLOW/mlruns/
 */mlruns/*
+mlruns/*
 mlflow/mlartifacts/*
+mlartifacts/*
 # Distribution / packaging
 .Python
 build/
