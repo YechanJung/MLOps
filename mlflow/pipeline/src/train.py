@@ -9,10 +9,13 @@ import mlflow
 
 from sklearn.model_selection import train_test_split, GridSearchCV
 from urllib.parse import urlparse
+from dotenv import load_dotenv
 
-os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/YechanJung/mlflow_pipeline_1.mlflow"
-os.environ["MLFLOW_TRACKING_USERNAME"]="YechanJung"
-os.environ["MLFLOW_TRACKING_PASSWORD"]="0f0e21bd43b2f70dbbe7931d166017d5255ca33f"
+load_dotenv()
+
+os.environ["MLFLOW_TRACKING_URI"]=os.getenv("MLFLOW_TRACKING_URI")
+os.environ["MLFLOW_TRACKING_USERNAME"]=os.getenv("MLFLOW_TRACKING_USERNAME")
+os.environ["MLFLOW_TRACKING_PASSWORD"]=os.getenv("MLFLOW_TRACKING_PASSWORD")
 
 def hyperparameter_tuning(X_train, y_train, param_grid):
 	rf = RandomForestClassifier()
